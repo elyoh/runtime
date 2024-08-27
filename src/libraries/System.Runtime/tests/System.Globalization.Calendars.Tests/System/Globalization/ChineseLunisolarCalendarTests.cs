@@ -15,11 +15,13 @@ namespace System.Globalization.Tests
 
         [Fact]
         public void OffByOneDay()
-        {
-            // Off-by-one-day-errors could result in a different leap months in 2057, 2089, and 2097
-            // The lunar new moon separating lunar months 8/9, 7/8, and 6/7 respectively begins close to 
-            // midnight local time (UTC+8) but the exact time cannot be determined accurately until nearer the time.
-            // The following is true based on current astronomical predictions from Calendrical Calculations (Ultimate Edition).
+        {          
+            // The lunar new moon separating lunar months 8/9 in 2057, 7/8 in 2089, and 6/7 in 2097 
+            // occurs close to midnight local time (UTC+8). The exact time cannot be determined accurately in advance.
+            // This may lead to off-by-one-day errors if the predictions made by the astronomical calculations 
+            // turn out to be wrong and the current table entries for 2057, 2089, and 2097,
+            // validated against Calendrical Calculations (Ultimate Edition), are changed.
+            // If these entries are adjusted in the future, this test will fail.
             
             // Lunar month 8 of 2057 has 30 days
             Assert.AreEqual(Calendar.GetDaysInMonth(2057, 8), 30);

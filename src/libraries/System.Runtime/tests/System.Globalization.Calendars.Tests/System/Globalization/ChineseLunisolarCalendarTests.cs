@@ -29,22 +29,22 @@ namespace System.Globalization.Tests
             // Lunar month 8 of 2057 has 30 days
             Assert.Equal(30, Calendar.GetDaysInMonth(2057, 8));
 
-            // Lunar month 9 of 2057 has 29 days and starts on 28 Sep 2057
+            // Lunar month 9 of 2057 has 29 days and starts on 29 Sep 2057
             Assert.Equal(29, Calendar.GetDaysInMonth(2057, 9));
-            Assert.Equal(new DateOnly(2057, 9, 28), new DateOnly(2057, 9, 1, Calendar));
+            Assert.Equal(new DateOnly(2057, 9, 29), new DateOnly(2057, 9, 1, Calendar));
 
             // Lunar month 7 of 2089 has 29 days
-            Assert.Equal(29, Calendar.GetDaysInMonth(2089, 7)); 
+            Assert.Equal(29, Calendar.GetDaysInMonth(2089, 7));
 
             // Lunar month 8 of 2089 has 30 days and starts on 04 Sep 2089
-            Assert.Equal(30, Calendar.GetDaysInMonth(2089, 8)); 
+            Assert.Equal(30, Calendar.GetDaysInMonth(2089, 8));
             Assert.Equal(new DateOnly(2089, 9, 4), new DateOnly(2089, 8, 1, Calendar));
 
             // Lunar month 6 of 2097 has 29 days
             Assert.Equal(29, Calendar.GetDaysInMonth(2097, 6));
 
             // Lunar month 7 of 2097 has 30 days and starts on 07 Aug 2097
-            Assert.Equal(30, Calendar.GetDaysInMonth(2097, 7)); 
+            Assert.Equal(30, Calendar.GetDaysInMonth(2097, 7));
             Assert.Equal(new DateOnly(2097, 8, 7), new DateOnly(2097, 7, 1, Calendar));
         }
     }
